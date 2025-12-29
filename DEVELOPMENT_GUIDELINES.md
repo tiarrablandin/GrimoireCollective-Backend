@@ -27,9 +27,46 @@ backend/
 │   │       ├── application.properties
 │   │       └── db/migration/        # Flyway migrations
 │   └── test/
+├── docs/                            # 📚 All documentation goes here
+│   └── README.md                    # Documentation index
 ├── build.gradle.kts
+├── README.md                        # Main entry point
+├── DEVELOPMENT_GUIDELINES.md        # This file
 └── gradlew
 ```
+
+### Documentation Standards
+
+**All documentation must be placed in the `docs/` directory.**
+
+- **API documentation**: Place in `docs/` (e.g., API_REFERENCE.md)
+- **Architecture docs**: Place in `docs/` (e.g., ARCHITECTURE.md)
+- **Setup guides**: Place in `docs/` (e.g., SETUP.md)
+- **Testing guides**: Place in `docs/` (e.g., TESTING.md)
+
+**Root-level files** should only include:
+- `README.md` - Main entry point and quick start
+- `DEVELOPMENT_GUIDELINES.md` - This file
+- Configuration files (`build.gradle.kts`, `settings.gradle.kts`, etc.)
+- Essential build/run files
+
+**Creating new documentation:**
+1. Place the file in `docs/`
+2. Add an entry to `docs/README.md` index
+3. Link from main `README.md` if appropriate
+4. Use consistent markdown formatting
+5. Include code examples and API samples
+
+## Core Principles
+
+### DRY (Don't Repeat Yourself)
+**All code must follow DRY principles:**
+- Extract reusable logic into functions, services, or utilities
+- Use inheritance, interfaces, and composition to avoid duplication
+- Create base classes or abstract classes for shared behavior
+- Leverage Kotlin's extension functions for reusable operations
+- If you find yourself copying code, refactor it into a shared component
+- Use constants and configuration for repeated values
 
 ## Coding Standards
 
